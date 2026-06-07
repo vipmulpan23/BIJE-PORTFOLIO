@@ -80,6 +80,20 @@ for (let i = 0; i < fieldProject.length; i++) {
     }
 }
 
+// ANIMATION SECTION PROJECTS
+const fieldProjectCard = document.querySelectorAll('.field-project-card');
+for (let i = 0; i < fieldProjectCard.length; i++) {
+    if (window.innerWidth > 768) {
+        fieldProjectCard[i].setAttribute('data-aos', 'fade-up');
+        fieldProjectCard[i].setAttribute('data-aos-duration', '700');
+        fieldProjectCard[i].setAttribute('data-aos-delay', `${i * 150}`);
+    } else {
+        fieldProjectCard[i].setAttribute('data-aos', 'zoom-in-up');
+        fieldProjectCard[i].setAttribute('data-aos-duration', '600');
+        fieldProjectCard[i].setAttribute('data-aos-delay', `${i * 100}`);
+    }
+}
+
 // ANIMATION SECTION CONTACT
 const formMessage = document.querySelector('.form-message');
 if (window.innerWidth > 768) {
